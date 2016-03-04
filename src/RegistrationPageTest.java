@@ -28,6 +28,11 @@ public class RegistrationPageTest {
         page.loadFields();
     }
 
+    @AfterClass
+    public static void closeDriver() {
+        webDriver.quit();
+    }
+
     @Test
     public void test_registration_form_neg() throws InterruptedException {
         page.setNameInput("V");
@@ -57,10 +62,5 @@ public class RegistrationPageTest {
 
         Assert.assertEquals("http://contactform-swedbank.rhcloud.com/index.html", page.getBackButton().getAttribute("href"));
 
-    }
-
-    @AfterClass
-    public static void tearDownClass() {
-        webDriver.close();
     }
 }
