@@ -67,7 +67,7 @@ public class SampleTest {
 
         //assert
         WebElement backButton = driver.findElement(By.xpath("//a[contains(@class, 'col-xs-offset-10 col-xs-2 btn btn-primary ng-binding')]"));
-        Assert.assertEquals(backButton.getAttribute("href"), "http://contactform-swedbank.rhcloud.com/index.html");
+        Assert.assertEquals("http://contactform-swedbank.rhcloud.com/index.html", backButton.getAttribute("href"));
         driver.quit();
     }
 }
