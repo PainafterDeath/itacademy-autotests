@@ -81,4 +81,16 @@ public class RegistrationPage {
         WebElement sendButton = driver.findElement(By.xpath("//input[contains(@value, 'Siųsti')]"));
         sendButton.click();
     }
+
+    public WebElement getConfirmButton()
+    {
+        WebElement sendButton = driver.findElement(By.xpath("//input[contains(@value, 'Siųsti')]"));
+        return sendButton;
+    }
+
+    public WebElement getBackButton()
+    {
+        WebElement backButton = driver.findElement(By.xpath("//a[contains(@class, 'col-xs-offset-10 col-xs-2 btn btn-primary ng-binding')]"));
+        return backButton;
+    }
 }
